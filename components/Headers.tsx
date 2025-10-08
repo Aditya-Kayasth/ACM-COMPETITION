@@ -60,7 +60,7 @@ const Headers = () => {
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            <div className="relative w-12 h-12 flex items-center justify-center">
+            <div className="relative w-11 h-11 flex items-center justify-center">
               {/* Diamond-shaped translucent background */}
               <div className="absolute inset-0 bg-white backdrop-blur-md rounded-md" />
 
