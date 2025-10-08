@@ -2,18 +2,6 @@
 
 A landing page for the PRAJWALAN coding contest organized by ACM Student Chapter, RCOEM.
 
-## 🚀 Features
-
-- ✨ Modern, animated design with Framer Motion
-- 🎨 Indian traditional color theme (Purple & Orange)
-- 📱 Fully responsive design
-- ⚡ Built with Next.js 14 & TypeScript
-- 🎯 Smooth scroll navigation
-- 💫 Interactive animations and effects
-- 🏆 Prize showcase section
-- 📅 Event timeline
-- 📞 Contact information
-
 ## 🛠️ Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
@@ -23,9 +11,7 @@ A landing page for the PRAJWALAN coding contest organized by ACM Student Chapter
 - **Icons**: Lucide React
 - **Scroll Detection**: React Intersection Observer
 
-File Structure
-
-Create the following folder structure:
+## 📁 File Structure
 
 ```
 prajwalan-landing/
@@ -72,4 +58,4 @@ For queries:
 
 ---
 
-Made with 💜 by ACM Tech Team
+Made with ❤️ by ACM Tech Team
