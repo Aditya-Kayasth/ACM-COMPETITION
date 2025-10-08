@@ -1,43 +1,43 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Headers = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('#home');
+  const [activeSection, setActiveSection] = useState("#home");
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
 
-      const sections = document.querySelectorAll('section[id]');
-      let current = '#home';
+      const sections = document.querySelectorAll("section[id]");
+      let current = "#home";
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
         if (rect.top <= 100 && rect.bottom >= 100) current = `#${section.id}`;
       });
       setActiveSection(current);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Prizes', href: '#prizes' },
-    { label: 'Timeline', href: '#timeline' },
-    { label: 'Contact', href: '#contact' },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Prizes", href: "#prizes" },
+    { label: "Timeline", href: "#timeline" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
       setIsMobileMenuOpen(false);
     }
   };
@@ -48,8 +48,8 @@ const Headers = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 pt-[0.5] pb-[0.5]${
         isScrolled
-          ? 'bg-[#0a0018]/70 backdrop-blur-xl shadow-[0_0_20px_rgba(124,58,237,0.15)] border-b border-white/5'
-          : 'bg-transparent'
+          ? "bg-[#0a0018]/70 backdrop-blur-xl shadow-[0_0_20px_rgba(124,58,237,0.15)] border-b border-white/5"
+          : "bg-transparent"
       }`}
     >
       <nav className="container mx-auto px-5 py-3 md:py-4">
@@ -58,16 +58,29 @@ const Headers = () => {
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => scrollToSection('#home')}
+            onClick={() => scrollToSection("#home")}
           >
-            <div className="relative w-12 h-12">
-              <Image src="/ACM_LOGO.png" alt="Prajwalan Logo" fill className="object-contain" />
+            <div className="relative w-12 h-12 flex items-center justify-center">
+              {/* Diamond-shaped translucent background */}
+              <div className="absolute inset-0 bg-white backdrop-blur-md rounded-md" />
+
+              {/* Logo image */}
+              <div className="relative w-10 h-10 rotate-[0deg]">
+                <Image
+                  src="/ACM_LOGO.png"
+                  alt="Prajwalan Logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent tracking-wide">
                 PRAJWALAN
               </h1>
-              <p className="text-xs text-gray-400 uppercase tracking-widest">Ignition of Ideas</p>
+              <p className="text-xs text-gray-400 uppercase tracking-widest">
+                Ignition of Ideas
+              </p>
             </div>
           </motion.div>
 
@@ -78,7 +91,9 @@ const Headers = () => {
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 className={`relative font-medium transition-colors ${
-                  activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
+                  activeSection === item.href
+                    ? "text-primary-400"
+                    : "text-gray-300 hover:text-primary-400"
                 }`}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -119,7 +134,7 @@ const Headers = () => {
           {isMobileMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
+              animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="md:hidden mt-3 overflow-hidden"
@@ -128,14 +143,19 @@ const Headers = () => {
                 className="flex flex-col items-center space-y-4 bg-[#0d0020]/80 backdrop-blur-lg rounded-2xl py-5 border border-white/10 shadow-[0_0_25px_rgba(124,58,237,0.1)]"
                 initial="hidden"
                 animate="visible"
-                variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
+                variants={{
+                  hidden: {},
+                  visible: { transition: { staggerChildren: 0.1 } },
+                }}
               >
                 {navItems.map((item) => (
                   <motion.button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
                     className={`text-lg font-medium ${
-                      activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
+                      activeSection === item.href
+                        ? "text-primary-400"
+                        : "text-gray-300 hover:text-primary-400"
                     }`}
                     initial={{ opacity: 0, y: -5 }}
                     animate={{ opacity: 1, y: 0 }}

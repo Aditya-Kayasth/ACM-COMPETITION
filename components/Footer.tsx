@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Instagram, Mail, MapPin, ExternalLink, Flame } from 'lucide-react';
+import { Phone, Instagram, Linkedin, Mail, MapPin, ExternalLink, Flame } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
@@ -11,13 +11,22 @@ const Footer = () => {
       url: 'https://www.instagram.com/acm_rbu',
       color: 'hover:text-pink-500',
     },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://linkedin.com/company/acm-rcoem/',
+      color: 'hover:text-blue-500',
+    },
   ];
 
   const quickLinks = [
     { name: 'About', href: '#about' },
     { name: 'Prizes', href: '#prizes' },
     { name: 'Timeline', href: '#timeline' },
-    { name: 'Register', href: 'https://unstop.com/hackathons/dsa-coding-challenge-shri-ramdeobaba-college-of-engineering-and-management-1562403' },
+    {
+      name: 'Register',
+      href: 'https://unstop.com/hackathons/dsa-coding-challenge-shri-ramdeobaba-college-of-engineering-and-management-1562403',
+    },
   ];
 
   return (
@@ -42,10 +51,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Section */}
           <div>
-            <motion.div
-              className="flex items-center space-x-3 mb-4"
-              whileHover={{ scale: 1.05 }}
-            >
+            <motion.div className="flex items-center space-x-3 mb-4" whileHover={{ scale: 1.05 }}>
               <Flame className="w-10 h-10 text-accent-500" />
               <div>
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">
@@ -65,7 +71,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-3 bg-dark-800 rounded-lg text-gray-400 ${social.color} transition-colors`}
+                  className={`p-3 bg-dark-800 rounded-lg text-gray-400 ${social.color} hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition-all duration-300`}
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -89,9 +95,7 @@ const Footer = () => {
                   >
                     <span className="mr-2 opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                     {link.name}
-                    {link.href.startsWith('http') && (
-                      <ExternalLink className="w-3 h-3 ml-1" />
-                    )}
+                    {link.href.startsWith('http') && <ExternalLink className="w-3 h-3 ml-1" />}
                   </a>
                 </li>
               ))}
@@ -108,6 +112,9 @@ const Footer = () => {
                   <p className="text-sm text-gray-500">Phone</p>
                   <a href="tel:9579944504" className="hover:text-primary-400 transition-colors">
                     +91 9579944504
+                  </a><br />
+                  <a href="tel:9579944504" className="hover:text-primary-400 transition-colors">
+                    +91 9067718254
                   </a>
                 </div>
               </div>
@@ -132,8 +139,10 @@ const Footer = () => {
                 <div>
                   <p className="text-sm text-gray-500">Location</p>
                   <p className="text-sm">
-                    Shri Ramdeobaba College of<br />
-                    Engineering and Management<br />
+                    Shri Ramdeobaba College of
+                    <br />
+                    Engineering and Management
+                    <br />
                     Nagpur, Maharashtra
                   </p>
                 </div>
@@ -163,9 +172,7 @@ const Footer = () => {
 
           {/* Tech Lead Credit */}
           <div className="mt-6 text-center">
-            <p className="text-gray-500 text-xs">
-              Crafted with 💜 by ACM Tech Team
-            </p>
+            <p className="text-gray-500 text-xs">Crafted with 💜 by ACM Tech Team</p>
           </div>
         </div>
       </div>
