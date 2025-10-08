@@ -61,9 +61,10 @@ const Footer = () => {
         />
       </div>
 
-      <div className="container mx-auto px-6 py-12 relative z-10">
+      <div className="container mx-auto px-6 py-16 relative z-10">
+        {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Brand Section */}
+          {/* 🌟 Brand Section */}
           <div>
             <motion.div
               className="flex items-center space-x-3 mb-4"
@@ -74,34 +75,46 @@ const Footer = () => {
                 <h3 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent">
                   PRAJWALAN
                 </h3>
-                <p className="text-xs text-gray-400">Ignition of Ideas</p>
+                <p className="text-xs text-gray-400 tracking-wide">
+                  Ignition of Ideas
+                </p>
               </div>
             </motion.div>
-            <p className="text-gray-400 mb-4">
-              An electrifying DSA & CP contest organized by ACM Student Chapter,
-              RCOEM. Light up your coding journey this Diwali!
+
+            <p className="text-gray-400 text-sm leading-relaxed mb-6">
+              An electrifying DSA & CP contest organized by the ACM Student
+              Chapter, RCOEM. Light up your coding journey this Diwali!
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social) => (
-                <motion.a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`p-3 bg-dark-800 rounded-lg text-gray-400 ${social.color} hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition-all duration-300`}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <social.icon className="w-5 h-5" />
-                </motion.a>
-              ))}
+
+            <div>
+              <h5 className="text-gray-300 text-sm uppercase tracking-wide mb-2">
+                Stay Connected
+              </h5>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <motion.a
+                    key={social.name}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`p-3 bg-dark-800 rounded-lg text-gray-400 ${social.color} hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition-all duration-300`}
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </motion.a>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* ⚡ Quick Links */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-4">Quick Links</h4>
-            <ul className="space-y-2">
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Quick Links
+            </h4>
+            <div className="w-12 h-[2px] bg-gradient-to-r from-primary-400 to-accent-500 mb-4" />
+            <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -127,10 +140,14 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Information */}
+          {/* 📞 Contact Information */}
           <div>
-            <h4 className="text-xl font-bold text-white mb-4">Contact Us</h4>
-            <div className="space-y-3">
+            <h4 className="text-xl font-semibold text-white mb-4">
+              Contact Us
+            </h4>
+            <div className="w-12 h-[2px] bg-gradient-to-r from-primary-400 to-accent-500 mb-4" />
+            <div className="space-y-4">
+              {/* Phone */}
               <div className="flex items-start space-x-3 text-gray-400">
                 <Phone className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
@@ -139,18 +156,19 @@ const Footer = () => {
                     href="tel:9579944504"
                     className="hover:text-primary-400 transition-colors"
                   >
-                    +91 9579944504
+                    +91 95799 44504
                   </a>
                   <br />
                   <a
-                    href="tel:9579944504"
+                    href="tel:9067718254"
                     className="hover:text-primary-400 transition-colors"
                   >
-                    +91 9067718254
+                    +91 90677 18254
                   </a>
                 </div>
               </div>
 
+              {/* Instagram */}
               <div className="flex items-start space-x-3 text-gray-400">
                 <Instagram className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
@@ -166,15 +184,14 @@ const Footer = () => {
                 </div>
               </div>
 
+              {/* Location */}
               <div className="flex items-start space-x-3 text-gray-400">
                 <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-sm text-gray-500">Location</p>
-                  <p className="text-sm">
-                    Shri Ramdeobaba College of
-                    <br />
-                    Engineering and Management
-                    <br />
+                  <p className="text-sm leading-snug">
+                    Shri Ramdeobaba College of <br />
+                    Engineering and Management <br />
                     Nagpur, Maharashtra
                   </p>
                 </div>
@@ -202,9 +219,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Tech Lead Credit */}
+          {/* Credit Line */}
           <div className="mt-6 text-center">
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-500 text-xs tracking-wide">
               Crafted with 💜 by ACM Tech Team
             </p>
           </div>
