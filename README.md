@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔥 PRAJWALAN - Ignition of Ideas
 
-## Getting Started
+A landing page for the PRAJWALAN coding contest organized by ACM Student Chapter, RCOEM.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ✨ Modern, animated design with Framer Motion
+- 🎨 Indian traditional color theme (Purple & Orange)
+- 📱 Fully responsive design
+- ⚡ Built with Next.js 14 & TypeScript
+- 🎯 Smooth scroll navigation
+- 💫 Interactive animations and effects
+- 🏆 Prize showcase section
+- 📅 Event timeline
+- 📞 Contact information
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v3
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Scroll Detection**: React Intersection Observer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+prajwalan/
+├── app/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components/
+│   ├── Header.tsx
+│   ├── HeroSection.tsx
+│   ├── AboutSection.tsx
+│   ├── PrizesSection.tsx
+│   ├── TimelineSection.tsx
+│   └── Footer.tsx
+├── tailwind.config.ts
+├── tsconfig.json
+├── package.json
+└── README.md
 
-## Learn More
+## ⚡ Performance Optimizations
 
-To learn more about Next.js, take a look at the following resources:
+- Code splitting with Next.js App Router
+- Lazy loading with Intersection Observer
+- Optimized animations with Framer Motion
+- CSS animations for better performance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is created for ACM Student Chapter, RCOEM.
 
-## Deploy on Vercel
+## 👥 Credits
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Organized by**: ACM Student Chapter, RCOEM
+- **Tech Lead**: Aditya, Mohammad, Ramharsh
+- **Powered by**: Unstop
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📞 Contact
+
+For queries:
+- Phone: +91 9579944504
+- Instagram: [@acm_rbu](https://www.instagram.com/acm_rbu)
+
+---
+
+Made with 💜 by ACM Tech Team
