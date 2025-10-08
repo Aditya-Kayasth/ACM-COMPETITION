@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Instagram, Mail, MapPin, ExternalLink, Flame } from 'lucide-react';
+import { Phone, Instagram, MapPin, ExternalLink, Flame, Mail, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const socialLinks = [
@@ -10,6 +10,12 @@ const Footer = () => {
       icon: Instagram,
       url: 'https://www.instagram.com/acm_rbu',
       color: 'hover:text-pink-500',
+    },
+    {
+      name: 'LinkedIn',
+      icon: Linkedin,
+      url: 'https://www.linkedin.com/company/acm-rbu-student-chapter/',
+      color: 'hover:text-blue-400',
     },
   ];
 
@@ -58,7 +64,7 @@ const Footer = () => {
               An electrifying DSA & CP contest organized by ACM Student Chapter, RCOEM.
               Light up your coding journey this Diwali!
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mb-4">
               {socialLinks.map((social) => (
                 <motion.a
                   key={social.name}
@@ -72,6 +78,17 @@ const Footer = () => {
                   <social.icon className="w-5 h-5" />
                 </motion.a>
               ))}
+            </div>
+            
+            {/* Email Section */}
+            <div className="flex items-center space-x-3 text-gray-400">
+              <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
+              <a 
+                href="mailto:info@rbustudentchapter.acm.org" 
+                className="text-sm hover:text-primary-400 transition-colors break-all"
+              >
+                info@rbustudentchapter.acm.org
+              </a>
             </div>
           </div>
 
@@ -108,21 +125,9 @@ const Footer = () => {
                   <p className="text-sm text-gray-500">Phone</p>
                   <a href="tel:9579944504" className="hover:text-primary-400 transition-colors">
                     +91 9579944504
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-3 text-gray-400">
-                <Instagram className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-sm text-gray-500">Instagram</p>
-                  <a
-                    href="https://www.instagram.com/acm_rbu"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary-400 transition-colors"
-                  >
-                    @acm_rbu
+                  </a><br/>
+                  <a href="tel:9067718254" className="hover:text-primary-400 transition-colors">
+                    +91 9067718254
                   </a>
                 </div>
               </div>
