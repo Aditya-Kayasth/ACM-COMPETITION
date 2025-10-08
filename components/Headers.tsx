@@ -46,11 +46,10 @@ const Headers = () => {
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 pt-[0.5] pb-[0.5]${
-        isScrolled
-          ? 'bg-[#0a0018]/70 backdrop-blur-xl shadow-[0_0_20px_rgba(124,58,237,0.15)] border-b border-white/5'
-          : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 pt-[0.5] pb-[0.5]${isScrolled
+        ? 'bg-[#0a0018]/70 backdrop-blur-xl shadow-[0_0_20px_rgba(124,58,237,0.15)] border-b border-white/5'
+        : 'bg-transparent'
+        }`}
     >
       <nav className="container mx-auto px-5 py-3 md:py-4">
         <div className="flex items-center justify-between">
@@ -60,8 +59,17 @@ const Headers = () => {
             className="flex items-center space-x-3 cursor-pointer"
             onClick={() => scrollToSection('#home')}
           >
-            <div className="relative w-12 h-12">
-              <Image src="/ACM_LOGO.png" alt="Prajwalan Logo" fill className="object-contain" />
+            <div className="relative w-16 h-16">
+              {/* White ACM Logo with better visibility */}
+              <div className="relative w-full h-full bg-white rounded-full p-2 shadow-lg">
+                <Image
+                  src="/ACM_LOGO.png"
+                  alt="ACM RCOEM Logo"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent tracking-wide">
@@ -77,9 +85,8 @@ const Headers = () => {
               <motion.button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className={`relative font-medium transition-colors ${
-                  activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
-                }`}
+                className={`relative font-medium transition-colors ${activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
+                  }`}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.05 }}
@@ -134,9 +141,8 @@ const Headers = () => {
                   <motion.button
                     key={item.href}
                     onClick={() => scrollToSection(item.href)}
-                    className={`text-lg font-medium ${
-                      activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
-                    }`}
+                    className={`text-lg font-medium ${activeSection === item.href ? 'text-primary-400' : 'text-gray-300 hover:text-primary-400'
+                      }`}
                     initial={{ opacity: 0, y: -5 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
