@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Trophy, Users, Zap, Brain, Target } from 'lucide-react';
+import { Code, Trophy, Users, Zap, Brain, Award } from 'lucide-react';
 
 const AboutSection = () => {
   const [ref, inView] = useInView({
@@ -14,25 +14,29 @@ const AboutSection = () => {
     {
       icon: Brain,
       title: 'Mind-Bending Challenges',
-      description: 'Tackle intense DSA & CP problems that will push your algorithmic thinking to new heights',
+      description:
+        'Tackle intense DSA & CP problems that will push your algorithmic thinking to new heights.',
       color: 'from-purple-500 to-pink-500',
     },
     {
       icon: Zap,
       title: 'Real-time Competition',
-      description: 'Experience the thrill of live coding with a dynamic leaderboard tracking your progress',
+      description:
+        'Experience the thrill of live coding with a dynamic leaderboard tracking your progress.',
       color: 'from-orange-500 to-red-500',
     },
     {
-      icon: Trophy,
-      title: 'Exciting Prizes',
-      description: 'Compete for prize money totaling ₹12,000 and showcase your coding prowess',
+      icon: Award,
+      title: 'Certificates of Excellence',
+      description:
+        'Earn official ACM certificates recognizing your coding brilliance and problem-solving skills.',
       color: 'from-yellow-500 to-orange-500',
     },
     {
       icon: Users,
       title: 'Open to All',
-      description: 'Whether beginner or expert, everyone is welcome to participate and learn',
+      description:
+        'Whether beginner or expert, everyone is welcome to participate, compete, and learn.',
       color: 'from-blue-500 to-purple-500',
     },
   ];
@@ -41,9 +45,7 @@ const AboutSection = () => {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   };
 
@@ -60,7 +62,10 @@ const AboutSection = () => {
     <section id="about" className="relative py-20 bg-dark-800 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-grid-pattern" style={{ backgroundSize: '40px 40px' }} />
+        <div
+          className="absolute inset-0 bg-grid-pattern"
+          style={{ backgroundSize: '40px 40px' }}
+        />
       </div>
 
       <motion.div
@@ -80,8 +85,8 @@ const AboutSection = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-accent-500 mx-auto mb-6" />
           <p className="text-gray-300 text-lg max-w-3xl mx-auto leading-relaxed">
             This Diwali, celebrate the festival of lights with a spectacular display of coding brilliance. 
-            PRAJWALAN brings together passionate coders for an electrifying contest that tests your 
-            problem-solving skills and algorithmic prowess.
+            <strong> PRAJWALAN </strong> brings together passionate coders for an electrifying contest that 
+            tests your problem-solving skills and algorithmic prowess.
           </p>
         </motion.div>
 
@@ -95,14 +100,20 @@ const AboutSection = () => {
               whileHover={{ y: -5 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 to-accent-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
-              
+
               <div className="relative z-10">
-                <div className={`inline-block p-3 bg-gradient-to-br ${feature.color} rounded-xl mb-4 shadow-lg`}>
+                <div
+                  className={`inline-block p-3 bg-gradient-to-br ${feature.color} rounded-xl mb-4 shadow-lg`}
+                >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -120,14 +131,14 @@ const AboutSection = () => {
               </div>
               <p className="text-gray-300">Intense Competition</p>
             </div>
-            
+
             <div>
               <div className="text-5xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent mb-2">
-                ₹12,000
+                Certificates
               </div>
-              <p className="text-gray-300">Total Prize Pool</p>
+              <p className="text-gray-300">For Top Performers</p>
             </div>
-            
+
             <div>
               <div className="text-5xl font-bold bg-gradient-to-r from-primary-400 to-accent-500 bg-clip-text text-transparent mb-2">
                 Online
@@ -138,12 +149,9 @@ const AboutSection = () => {
         </motion.div>
 
         {/* Call to Action */}
-        <motion.div
-          variants={itemVariants}
-          className="text-center mt-12"
-        >
+        <motion.div variants={itemVariants} className="text-center mt-12">
           <p className="text-gray-300 text-lg mb-6">
-            Ready to ignite your coding journey? Join us this Diwali!
+            Ready to ignite your coding journey? Join us this Diwali and earn your certificate of excellence!
           </p>
           <motion.a
             href="https://unstop.com/hackathons/dsa-coding-challenge-shri-ramdeobaba-college-of-engineering-and-management-1562403"
