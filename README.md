@@ -23,7 +23,12 @@ A landing page for the PRAJWALAN coding contest organized by ACM Student Chapter
 - **Icons**: Lucide React
 - **Scroll Detection**: React Intersection Observer
 
-prajwalan/
+File Structure
+
+Create the following folder structure:
+
+```
+prajwalan-landing/
 ├── app/
 │   ├── globals.css
 │   ├── layout.tsx
@@ -39,6 +44,8 @@ prajwalan/
 ├── tsconfig.json
 ├── package.json
 └── README.md
+```
+
 
 ## ⚡ Performance Optimizations
 
