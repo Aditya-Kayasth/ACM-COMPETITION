@@ -45,7 +45,7 @@ const HeroSection = () => {
               <Flame className="w-24 h-24 mx-auto text-accent-500 drop-shadow-[0_0_20px_rgba(249,115,22,0.6)]" />
             </motion.div>
 
-            <h2 className="text-lg md:text-xl text-primary-300 mb-4 tracking-wider font-light">
+            <h2 className="text-lg md:text-xl text-gray-300 mb-4 tracking-wider font-light">
               ACM RBU Presents, Ignition of Ideas
             </h2>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6">
