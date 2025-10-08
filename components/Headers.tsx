@@ -65,7 +65,7 @@ const Headers = () => {
               <div className="absolute inset-0 bg-white backdrop-blur-md rounded-md" />
 
               {/* Logo image */}
-              <div className="relative w-8 h-8 rotate-[0deg]">
+              <div className="relative w-10 h-10 rotate-[0deg]">
                 <Image
                   src="/ACM_LOGO.png"
                   alt="Prajwalan Logo"
