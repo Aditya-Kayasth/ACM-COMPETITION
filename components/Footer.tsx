@@ -45,7 +45,7 @@ const Footer = () => {
       {/* ✨ Background Animation */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-grid-pattern opacity-20"
+          className="absolute inset-0 bg-grid-pattern opacity-40"
           style={{ backgroundSize: "50px 50px" }}
         />
         <div className="absolute inset-0 bg-radial-gradient" />

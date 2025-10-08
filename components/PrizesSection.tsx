@@ -55,7 +55,7 @@ const PrizesSection = () => {
       {/* ✨ Animated Background */}
       <div className="absolute inset-0">
         <div
-          className="absolute inset-0 bg-grid-pattern opacity-30"
+          className="absolute inset-0 bg-grid-pattern opacity-40"
           style={{ backgroundSize: '50px 50px' }}
         />
         <div className="absolute inset-0 bg-radial-gradient" />
